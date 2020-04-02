@@ -1,0 +1,155 @@
+/* ---------------------------------------------------------------- */
+/* 12.Experience                            
+/* ---------------------------------------------------------------- */
+.experience-item {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: $color_white;
+    border-radius: 10px;
+    transition: $trs_linear;
+    box-shadow: 0 10px 15px 0 $color_shadow;
+    &:hover {
+        box-shadow: 0 23px 49px 0 $color_shadow_hover;
+        transform: translateY(-10px);
+        .resume-univ-icon {
+            span {
+                text-align: center;
+                &:before {
+                    background: $color_primary;
+                    color: $color_white;
+                    animation: pulseOrange 1s 1 linear;
+                }
+            }
+        }
+    }
+    .resume-univ-text {
+        color: $color_primary;
+        font-weight: 600;
+        text-transform: uppercase;
+        h6  {
+            color: $color_primary;
+            font-weight: 500;
+            margin-bottom: 10px;
+            i {
+                color: $color_primary;
+                margin-right: 10px;
+            }
+        }
+    }
+    .resume-univ-icon {
+        span {
+            text-align: center;
+            &:before {
+                color: $color_white;
+                width: 90px;
+                height: 90px;
+                margin-left: 0;
+                font-size: 45px;
+                background: transparent;
+                border-radius: 10px;
+                display: inline-block;
+                margin-bottom: 20px;
+                line-height: 90px;
+                transition: $trs_linear;
+                background: $color_primary;
+            }
+        }
+    }
+    .experience-item-body {
+        margin-top: 10px;
+    }
+}
+// Tab Item
+.resume-tab-item {
+    .resume-tab-item-inner {
+        padding: 30px;
+        margin-bottom: 30px;
+        background: $color_white;
+        border-radius: 10px;
+        transition: $trs_linear;
+        box-shadow: 0 10px 15px 0 $color_shadow;
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 23px 49px 0 $color_shadow_hover;
+        }
+    }
+    i {
+        text-align: center;
+        &:before {
+            color: $color_primary;
+            width: 90px;
+            height: 90px;
+            margin-left: 0;
+            font-size: 45px;
+            background: transparent;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+            line-height: 90px;
+            transition: $trs_linear;
+            background: rgba($color_primary, 0.1);
+        }
+    }
+    &.active {
+        i {
+            &:before {
+                color: $color_white;
+                background: $color_primary;
+                animation: pulseOrange 1s 1 linear;
+            }
+        }
+        h5 {
+            transition: initial;
+        }
+    }
+}
+.resume-tab-content {
+    position: relative;
+    display: none;
+    overflow: hidden;
+    &.active {
+        display: block;
+        animation: fadeInDown 1s ease forwards;
+    }
+}
+
+
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Medium devices (tablets, less than 992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:991.98px) {
+    .experience-number {
+        display: none !important;
+    }
+    .experience-item {
+        text-align: left !important;
+    }
+ }
+
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+/* Small devices (landscape phones, less than 768px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width: 767.98px) {
+    .resume-tab-content {
+        .experience-item {
+            &:nth-child(5) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+/* Size reduced because it does not fit on this device
+ * Extra small devices (Iphone 5, less than 320px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:320px) {
+    // Resume Tab Link
+    .resume-toggle-wrap {
+        a {
+            padding: 16px 25px;
+        }
+    }
+}

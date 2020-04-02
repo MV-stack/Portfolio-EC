@@ -1,0 +1,61 @@
+/* ---------------------------------------------------------------- */
+/* 22.BreadCrumb                           
+/* ---------------------------------------------------------------- */
+.breadcrumb-section {
+    padding: 150px 0;
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        content: '';
+        opacity: 0.6;
+        height: 100%;
+        position: absolute;
+        background: $color_dark_blue;
+    }
+    .breadcrumb-title {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        color: $color_white;
+    }
+    .breadcrumb-links  {        
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            color: $color_white;
+            &.breadcrumb-active {
+                font-weight: 500;
+                &:before {
+                    content: "\f101";
+                    font-size: 1rem;
+                    font-weight: 700;
+                    margin-right: 15px;
+                    color: $color_primary;
+                    font-family: "Font Awesome 5 Free";
+                }
+            }
+            a {
+                color: $color_white;
+                &:hover {
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Extra Small devices (portrait phones, less than 576px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width: 575.98px) {
+    .breadcrumb-section {
+        .breadcrumb-title {
+            font-size: 2.2rem;
+        }
+    }
+}

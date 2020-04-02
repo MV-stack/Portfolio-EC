@@ -1,0 +1,69 @@
+/* ---------------------------------------------------------------- */
+/* 19.Latest Blog                              
+/* ---------------------------------------------------------------- */
+.blog-item {
+    background: $color_white;
+    border-radius: $radius_md;
+    margin-bottom: $mb_30;
+    transition: $trs_linear;
+    box-shadow: 0 10px 15px 0 $color_shadow;
+    &:hover {
+        box-shadow: 0 23px 49px 0 $color_shadow_hover;
+    }
+    .blog-top {
+        position: relative;
+        overflow: hidden;
+        border-radius: $radius_md;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: $radius_md;
+            transition: $trs_linear;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }  
+    .blog-body {
+        padding: $p_30;
+        position: relative;
+        .blog-author, .blog-date {
+            color: $color_black;
+            font-size: 0.92rem;
+            font-weight: 500;
+            &:hover {
+                color: $color_primary;
+            }
+            i {
+                color: $color_primary;
+            }
+        }
+        .blog-title {
+            margin-bottom: $mb_10;
+            a {
+                color: $color_black;
+                &:hover {
+                    color: $color_primary;
+                }
+            }
+        }
+        .blog-text {
+            margin: 15px 0;
+        }
+        .default-link {
+            color:$color_black;
+            font-weight: 600;
+            text-transform: capitalize;
+            &:hover {
+                color: $color_primary;
+                i {
+                    margin-left: 8px;
+                }
+            }
+            i {
+                margin-left: 5px;
+                transition: $trs_linear;
+            }
+        }
+    }
+}

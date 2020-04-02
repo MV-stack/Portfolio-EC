@@ -1,0 +1,77 @@
+/* ---------------------------------------------------------------- */
+/* 11.About                             
+/* ---------------------------------------------------------------- */
+.about-inner {
+    h4 {
+        margin-bottom: $mb_15;
+        span {
+            color: $color_primary;
+        }
+    }
+    p {
+        margin-bottom: $mb_30;
+    }
+    .about-list {
+        margin-bottom: $mb_30;
+        li {
+            margin-bottom: $mb_10;
+            width: 100%;
+            &:last-child {
+                margin-bottom: $mb_0;
+            }
+            .list-item-title {
+                color: $color_black;
+                font-weight: 700;
+                &:after {
+                    content: ":";
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+.about-img-wrap {
+    z-index: 82;
+    position: relative;
+    &:before {
+        content: "";
+        top: 50%;
+        left: -30px;
+        width: 80%;
+        height: 80%;
+        z-index: -77;
+        position: absolute;
+        background: $color_primary;
+        border-radius: $radius_md;
+        transform: translateY(-50%);    
+        box-shadow: 0 6px 12px 0 rgba($color_primary,0.4);
+    }
+    img {
+        border-radius: $radius_md;
+        box-shadow: 0 23px 49px 0 $color_shadow_hover;
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Medium devices (tablets, less than 992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:991.98px) {
+    .about-img-wrap {
+        img {
+            display: none;
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+/* Small devices (landscape phones, less than 768px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:767.98px) {
+    .about-inner {
+        h4 {
+            font-size: 2.2rem;
+        }
+    }
+}

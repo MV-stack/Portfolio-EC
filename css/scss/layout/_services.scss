@@ -1,0 +1,46 @@
+/* ---------------------------------------------------------------- */
+/* 14.Services                                                    
+/* ---------------------------------------------------------------- */
+.services-box {
+    padding: 30px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: $color_white;
+    text-align: center;
+    border-radius: 10px;
+    transition: $trs_linear;
+    box-shadow: 0 10px 15px 0 $color_shadow;
+    &:hover {
+        box-shadow: 0 23px 49px 0 $color_shadow_hover;
+        transform: translateY(-10px);
+        .services-box-icon span {
+            text-align: center;
+            &:before {
+                animation: pulseOrange 1s 1 linear;
+            }
+        }
+    }
+    .services-box-icon {
+        span {
+            text-align: center;
+            &:before {
+                color: $color_white;
+                width: 90px;
+                height: 90px;
+                margin-left: 0;
+                font-size: 45px;
+                background: $color_primary;
+                border-radius: 10px;
+                display: inline-block;
+                margin-bottom: 20px;
+                line-height: 90px;
+                transition: $trs_linear;
+            }
+        }
+    }
+    .services-box-body{
+        h5 {
+            margin-bottom: 10px;
+        }
+    }
+}

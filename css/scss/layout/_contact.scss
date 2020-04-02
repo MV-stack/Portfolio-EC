@@ -1,0 +1,51 @@
+/* ---------------------------------------------------------------- */
+/* 20.Contact                            
+/* ---------------------------------------------------------------- */
+.contact-content {
+    padding: $p_30;
+    border-radius: $radius_md;
+    box-shadow: 0 23px 49px 0 $color_shadow;
+    .contact-form {
+        .contact-form-group {
+            margin-bottom: $mb_30;
+            .default-orange-btn {
+                border:none;
+            }
+        }
+        .contact-form-control {
+            width: 100%;
+            border: none;
+            display: block;
+            color: $color_black;
+            padding: 17px 20px;
+            background: $color_white;
+            border-radius: $radius_sm;
+            border:1px solid $color_soft_grey;
+            transition: $trs_linear;
+            &:focus {
+                border-color: $color_black;
+                color: $color_black;
+            }
+        }
+        .empty-form, .email-invalid, .success-form {
+            span {
+                display: block;
+                padding: 17px 20px;
+                border-radius: $radius_sm;
+                margin-bottom: 30px;
+            }
+        }
+        .empty-form, .email-invalid {
+            span { 
+                color: $color_danger_text;
+                background: $color_danger_bg;
+            }
+        }
+        .success-form {
+            span {
+                background: $color_success_bg;
+                color: $color_success_text;
+            }
+        }
+    }
+}

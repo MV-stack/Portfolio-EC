@@ -1,0 +1,182 @@
+/* ---------------------------------------------------------------- */
+/* 10.Hero                                                    
+/* ---------------------------------------------------------------- */
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include flexCenter;
+    .hero-inner {
+        .hero-social {
+            margin-bottom: $mb_10;
+            a {
+                height: 42px;
+                width: 42px;
+                color: $color_white;
+                line-height: 42px;
+                border-radius:$radius_sm;
+                margin-right: 10px;
+                background: $color_primary;
+                display: inline-block;
+                text-align: center;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    animation: pulseOrange 1s 1 linear;
+                }
+            }
+        }
+        .hero-social-white {
+            margin-bottom: $mb_10;
+            a {
+                height: 42px;
+                width: 42px;
+                color: $color_primary;
+                line-height: 42px;
+                border-radius:$radius_sm;
+                margin-right: 10px;
+                text-align: center;
+                background: $color_white;
+                display: inline-block;
+                transition: $trs_linear;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    color: $color_white;
+                    background: darken($color_primary,5%);
+                    animation: pulseOrange 1s 1 linear;
+                }
+            }
+        }
+        h1 {
+            display: block;
+            text-transform: capitalize;
+            color: $color_black;
+            margin-bottom: $mb_15;
+            #typed-text, .typed-cursor{
+                color: $color_primary;
+            }
+        }
+        p {
+            max-width: 550px;
+            font-size: 1rem;
+            margin-bottom: $mb_30;
+            font-style: italic;
+        }
+        &.white-text {
+            p,h1 {
+                color: $color_white;
+            }
+        }
+    }
+    .banner-profile-img {
+        z-index: 77;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            width: 80%;
+            height: 80%;
+            opacity: 1;
+            z-index: -77;
+            background: $color_primary;
+            border-radius: $radius_md;
+            transform: translateY(-50%);
+            box-shadow: 0 6px 12px 0 rgba($color_primary,0.4);
+        }
+        img {
+            z-index: 150;
+            border-radius: $radius_md;
+            box-shadow: 0 23px 49px 0 $color_shadow_hover;
+        }
+    }
+    .button-group-center {
+        left: 50%;
+        bottom: 30px;
+        height: 160px;
+        width: 160px;
+        background: $color_white;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        z-index: 18;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-50%);
+        box-shadow: 0 23px 49px 0 $color_shadow_hover;
+        .my-video-btn {
+            color: $color_white;
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            line-height: 60px;
+            padding-left: 3px;
+            border-radius: $radius_circle;
+            background: $color_primary;
+            transition: $trs_linear;    
+            &:hover {
+                color: $color_white;
+                background: darken($color_primary,5%);
+                animation: pulseOrange 1s 1 linear;
+            }
+        }
+        .scroll-down-btn {
+            top: -25px;
+            left: 50%;
+            height: 60px;
+            width: 60px;
+            color: $color_primary;
+            text-align: center;
+            line-height: 60px;
+            position: absolute;
+            background: $color_white;
+            border-radius: $radius_circle;
+            transition: $trs_linear;
+            transform: translateX(-50%);
+            box-shadow: 0 10px 15px 0 $color_shadow;
+            &:hover {
+                color: $color_white;
+                background: darken($color_primary,5%);
+                animation: pulseOrange 1s 1 linear;
+            }
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Medium devices (tablets, less than 992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:991.98px) {
+    .hero-banner {
+        text-align: center;
+        .banner-profile-img {
+            display: none;
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+/* Small devices (landscape phones, less than 768px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:767.98px) {
+    .hero-banner {
+        .button-group-center {
+            display: none;
+        }
+        .hero-inner {
+            h1 {
+                font-size: 2.4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+/* ---------------------------------------------------------------- */
+/* 15.Portfolio                                                     
+/* ---------------------------------------------------------------- */
+.portfolio-filter {
+    text-align: center;
+    margin-bottom: 30px;
+    a {
+        margin-right: 15px;
+        color: $color_black;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: 500;
+        padding: 10px 30px;
+        text-transform:capitalize;
+        transition: initial;
+        border: 2px solid $color_primary;
+        &.current {
+            color: $color_white;
+            background:$color_primary;
+        }
+    }
+}
+.glry-item {
+    margin: 0px 0px 30px 0px;
+    padding-left: 10px;
+    border-radius: 10px;
+    .portfolio-img img {
+        width: 100%;
+    }
+    &:hover {
+        .portfolio-inner {
+            .portfolio-back {
+                &:after, &:before {
+                    top: 0;
+                    transition: all 0.5s;
+                }
+                .portfolio-buttons {
+                    opacity: 1;
+                    display: block;
+                    visibility: visible;
+                    transition-delay: 0.3s;
+                    animation: fadeInUp 0.3s ease-in-out forwards;
+                }
+            }
+        }
+    }
+    .portfolio-inner {
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        transition: $trs_linear;
+        &:hover {
+            box-shadow: 0 23px 49px 0 rgba(0,0,0,0.2);
+        }
+        .portfolio-back {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $trs_linear;
+            &:after, &:before {
+                content: "";
+                width: 50%;
+                height: 100%;
+                background: rgba(5, 6, 41,0.8);
+                position: absolute;
+                transition: $trs_linear;
+            }
+            &:after {
+                left: 0;
+                top: -100%;
+            }
+            &:before {
+                right: 0;
+                top: 100%;
+            }
+            .portfolio-buttons {
+                z-index: 73;
+                animation: fadeOutDown 0.3s ease-in-out forwards;
+                a {
+                    width: 60px;
+                    height: 60px;
+                    display: inline-block;
+                    background: $color_white;
+                    text-align: center;
+                    line-height: 60px;
+                    color:  $color_primary;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    transition: $trs_linear;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        color: #fff;
+                        background: $color_primary;
+                        animation: pulseOrange 1s 1 linear;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+/* Small devices (landscape phones, less than 768px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:767.98px) {
+    .portfolio-filter {
+        flex-direction: column;
+        a {
+            display: block;
+            margin-right: 0;
+            margin-top: 10px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}

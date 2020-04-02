@@ -1,0 +1,88 @@
+/* ---------------------------------------------------------------- */
+/* 27.Portfolio Details                           
+/* ---------------------------------------------------------------- */
+.portfolio-img-slider {
+    top: 0;
+    left: 0;
+    position: relative;
+    .item {
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    &.owl-carousel {
+        .owl-nav{
+            .owl-prev, .owl-next {
+                top: 50%;
+                height: 50px;
+                width: 50px;
+                color:$color_white;
+                display: block;
+                line-height: 50px;
+                position: absolute;
+                border-radius: $radius_sm;
+                background: $color_primary;
+                transition: $trs_linear;
+                transform: translateY(-50%);
+                &:hover {
+                    color: $color_white;
+                    background: darken($color_primary,5%);
+                    animation: pulseOrange 1s 1 linear;
+                }
+            }
+            .owl-next {
+                right: 10px;
+            }
+            .owl-prev {
+                left: 10px;
+            }
+        }
+    }
+}
+.portfolio-info {
+    h4 {
+        margin-bottom: $mb_10;
+    }
+    p {
+        margin-bottom: $mb_15;
+    }
+}
+.portfolio-details {
+    ul {
+        margin-bottom: $mb_30;
+        li {
+            margin-bottom: $mb_10;
+            span {
+                color: $color_black;
+                font-weight: 700;
+                &:after {
+                    content: ":";
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Medium devices (tablets, less than 992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width: 991.98px) {
+    .portfolio-img-slider {
+        margin-bottom: 30px;
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Medium devices (portrait phones, less than 576px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width: 575.98px) {
+    .portfolio-info {
+        h4 {
+            font-size: 1.8rem;
+        }
+    }
+}

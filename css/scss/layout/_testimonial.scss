@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------------- */
+/* 16.Testimonial
+/* ------------------------------------------------------------------- */
+.testimonials-item {
+    text-align: center;
+    background: transparent;
+    img {
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    .testimonials-body {
+        h5 {
+            margin-bottom: 5px;
+        }
+        p {
+            font-style: italic;
+        }
+        span {
+            color: $color_primary;
+            display: block;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }   
+        .testimonial-rating {
+            margin-top: 20px;
+            i {
+                color: $color_primary;
+            }
+        }     
+    }
+}

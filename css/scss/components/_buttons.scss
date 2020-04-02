@@ -1,0 +1,64 @@
+/* ---------------------------------------------------------------- */
+/* 04.Buttons                                                     
+/* ---------------------------------------------------------------- */
+.default-orange-btn {
+    color: $color_white;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    border-radius: $radius_sm;
+    padding: 18px 36px;
+    display: inline-block;
+    text-transform: capitalize;
+    background: $color_primary;
+    transition: $trs_linear;
+    &:hover {
+        color: $color_white;
+        background: darken($color_primary,5%);
+        animation: pulseOrange 1s 1 linear;
+    }
+}
+.default-white-btn {
+    color: $color_primary;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    border-radius: $radius_sm;
+    padding: 18px 36px;
+    display: inline-block;
+    text-transform: capitalize;
+    background: $color_white;
+    transition: $trs_linear;
+    &:hover {
+        color: $color_white;
+        background: darken($color_primary,5%);
+        animation: pulseOrange 1s 1 linear;
+    }
+}
+.scroll-top-btn {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 18;
+    right: 10px;
+    bottom: 20px;
+    color: $color_white;
+    position: fixed;
+    line-height: 50px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: $radius_sm;
+    background: $color_primary;
+    transition: $trs_linear;
+    box-shadow: 0 0 0 0 rgba($color_primary,4);
+    animation: pulseOrange 2s infinite;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover {
+        color: $color_white;
+        background: darken($color_primary,5%);
+        animation: none;
+    }
+}

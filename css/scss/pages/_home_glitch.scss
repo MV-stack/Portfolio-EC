@@ -1,0 +1,33 @@
+/* ---------------------------------------------------------------- */
+/* 26.Home Glitch Img                            
+/* ---------------------------------------------------------------- */
+.glitch-img-banner {
+    .overlay-glitch {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        z-index: 12;
+        background: $color_dark_blue;
+    }
+    .glitch-img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .container {
+        position: relative;
+        z-index: 56;
+    }
+    .down-scroll { 
+        z-index: 58;
+    }   
+}
