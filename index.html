@@ -5,7 +5,7 @@
     <!--// Meta Tags //-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fotor Personal Portfolio">
+    <meta name="description" content="Personal Portfolio">
     <meta name="keywords" content="portfolio,resume,personal,cv,one page">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--// Icons //-->
@@ -43,9 +43,10 @@
                     <div class="collapse navbar-collapse main-menu justify-content-end" id="fixedNavbar">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#" id="homeDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="#" data-scroll-nav="1">Home</a>
+                                <!--<a class="nav-link" href="#" id="homeDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Home
-                            </a>
+                            </a>-->
                                 
                             </li>
                             <li class="nav-item">
@@ -55,9 +56,10 @@
                                 <a class="nav-link" href="#" data-scroll-nav="3">Services</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="portfolioDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="#" data-scroll-nav="4">Portfolio</a>
+                                <!--<a class="nav-link" href="#" id="portfolioDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Portfolio
-                            </a>
+                            </a>-->
                                 
                             </li>
                             
@@ -82,7 +84,7 @@
                                 <a href="https://linkedin.com/in/miguel-a-villegas" target="_blank"><i class="fab fa-linkedin"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <h1>Im <span id="typed-text"></span></h1>
+                            <h1><span id="typed-text"></span></h1>
                             <p>
                                 It is a long established fact that a reader will be distracted by 
                                 the readable content of a page when looking at its layout.
@@ -599,7 +601,7 @@
                             <div class="footer-widget">
                                 <div class="footer-logo-wrap">
                                     <a href="#">
-                                        <img src="/img/MVlogo.png" alt="Footer Logo">
+                                        <img src="/images/MVlogo.png" alt="Footer Logo">
                                     </a>
                                 </div>
                                 <p class="footer-about-text">
@@ -677,7 +679,8 @@
         $(document).ready(function() {
             // Typed Text
             var options = {
-                strings: ["Web Designer", "Web Developer"],
+                //strings: ["Web Designer", "Web Developer"],
+                strings: ["Full Stack Developer"],
                 typeSpeed: 40,
                 backSpeed: 40,
                 loop: true
